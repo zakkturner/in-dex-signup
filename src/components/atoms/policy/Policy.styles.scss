@@ -1,0 +1,31 @@
+.policy {
+  width: 280px;
+  display: flex;
+  &__box {
+    margin-right: 10px;
+    align-self: flex-start;
+  }
+  &__text {
+    color: #888888;
+    font-family: Azo-Sans-Light;
+    font-size: 12px;
+    margin-right: 10px;
+    a {
+      color: #888888;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .policy {
+    width: 319px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .policy {
+    width: 380px;
+  }
+}
