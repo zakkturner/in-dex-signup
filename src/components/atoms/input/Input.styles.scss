@@ -1,5 +1,5 @@
 .input {
-  width: 100%;
+  // width: 100%;
   background-color: #292737;
   border: none;
   border-radius: 5px;
@@ -11,6 +11,20 @@
   font-size: 14px;
   margin-bottom: 10px;
   padding-left: 15px;
+  &.mini {
+    width: 135px;
+    background-color: #292737;
+    border: none;
+    border-radius: 5px;
+
+    height: 40px;
+    color: #94aebf;
+    font-family: Azo-Sans-Medium;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -19,6 +33,10 @@
     height: 50px;
     margin-right: 20px;
     font-size: 24px;
+
+    &.mini {
+      display: inline-block;
+    }
   }
 }
 
