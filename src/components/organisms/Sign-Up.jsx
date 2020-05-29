@@ -9,6 +9,7 @@ import "./Sign-Up.styles.scss";
 
 export default function SignUp() {
   let [currentStep, setStep] = useState(1);
+  let [inputText, setValue] = useState("");
 
   let title = useRef(null);
   let subTitle = useRef(null);
@@ -69,10 +70,16 @@ export default function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // if (inputText === "") {
+    //   alert("Please fill out form completely");
+    // } else {
     setStep(currentStep + 1);
-    console.log(currentStep);
+    // }
   };
+
+  // const handleChange = (e) => {
+  //   setValue(e.target.value);
+  // };
 
   return (
     <main className="sign-up">
@@ -96,12 +103,18 @@ export default function SignUp() {
                 The IN-Dex Newsletter
               </span>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
               <div className="form__group">
-                <Input inputRef={inputRef} currentStep={currentStep} />
+                <Input
+                  inputRef={inputRef}
+                  currentStep={currentStep}
+                  // inputText={inputText}
+                  // setValue={setValue}
+                  // handleChange={handleChange}
+                />
                 <SubmitBtn
                   submitRef={submitRef}
-                  handleSubmit={handleSubmit}
+                  // handleSubmit={handleSubmit}
                   currentStep={currentStep}
                   value="Next"
                 />
@@ -132,7 +145,7 @@ export default function SignUp() {
                 Your First and Last Name
               </span>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
               <div className="form__group">
                 <Input
                   inputRef={inputRef}
@@ -172,7 +185,7 @@ export default function SignUp() {
                 Look out for the latest news on your favorite tech.
               </span>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
               <div className="form__group">
                 <Input
                   inputRef={inputRef}

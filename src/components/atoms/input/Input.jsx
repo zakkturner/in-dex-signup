@@ -7,16 +7,22 @@ export default function Input({
   inputTwoRef,
   currentStep,
   className,
+  // handleChange,
+  // inputText,
 }) {
   return (
     <>
       {currentStep === 1 && (
         <input
-          type="text"
+          type="email"
           name="email"
+          id="email"
           className={`input ${className}`}
           placeholder="Enter Email Address"
           ref={inputRef}
+          // onChange={handleChange}
+          // value={inputText}
+          required
         />
       )}
       {currentStep === 2 && (
@@ -24,17 +30,21 @@ export default function Input({
           <div className="mini-container">
             <input
               type="text"
-              name="email"
+              name="firstName"
+              id="firstName"
               className={`input ${className}`}
               placeholder="First Name"
               ref={inputRef}
+              required="true"
             />
             <input
               type="text"
-              name="email"
+              name="lastName"
+              id="lastName"
               className={`input ${className}`}
               placeholder="Last Name"
               ref={inputTwoRef}
+              required
             />
           </div>
         </>

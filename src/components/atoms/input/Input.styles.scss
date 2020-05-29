@@ -36,6 +36,8 @@
 
     &.mini {
       display: inline-block;
+      width: 182px;
+      height: 45px;
     }
   }
 }
@@ -43,5 +45,8 @@
 @media screen and (min-width: 1200px) {
   .input {
     width: 480px;
+    &.mini {
+      width: 235px;
+    }
   }
 }
